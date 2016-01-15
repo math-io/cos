@@ -28,7 +28,8 @@ test( 'the function computes the cosine', function test( t ) {
 
 	delta = abs( cos( Math.PI/4 ) - Math.sqrt(2)/2 );
 	t.ok( delta < 1e-14, 'approx sqrt(2)/2' );
-
+	
+	t.end();
 });
 
 
