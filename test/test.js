@@ -18,7 +18,7 @@ test( 'the function computes the cosine', function test( t ) {
 	var delta;
 
 	delta = abs( cos( 0 ) - 1 );
-	t.ok( delta < 1e-14, 'approx 0' );
+	t.ok( delta < 1e-14, 'approx 1' );
 
 	delta = abs( cos( Math.PI/2 ) - 0 );
 	t.ok( delta < 1e-14, 'approx 0' );
@@ -27,7 +27,7 @@ test( 'the function computes the cosine', function test( t ) {
 	t.ok( delta < 1e-14, 'approx 1/2' );
 
 	delta = abs( cos( Math.PI/4 ) - Math.sqrt(2)/2 );
-	t.ok( delta < 1e-14, 'approx 1/2' );
+	t.ok( delta < 1e-14, 'approx sqrt(2)/2' );
 
 });
 
@@ -45,11 +45,7 @@ test( 'the function returns `NaN` if provided a `+infinity`', function test( t )
 });
 
 test( 'the function returns `NaN` if provided a `-infinity`', function test( t ) {
-<<<<<<< HEAD
 	var v = cos( Number.NEGATIVE_INFINITY );
-=======
-	var v = sin( Number.NEGATIVE_INFINITY );
->>>>>>> origin/master
 	t.ok( v !== v, 'returns NaN' );
 	t.end();
 });
